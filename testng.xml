@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="2">
+  
+  <listeners> 
+  	<listener class-name="ExerciseEmail.TestListeners"/> 
+  </listeners>
+  
+  <test name="Test1" parallel="none">
+  
+    <classes>
+      <class name="ExerciseEmail.BaseLogInOut"/>
+      <class name="ExerciseEmail.TestAllEmailFieldsInformed"/>
+    </classes>
+  </test> 
+  
+  <test name="Test2" parallel="none">
+  
+    <classes>
+      <class name="ExerciseEmail.BaseLogInOut"/>
+      <class name="ExerciseEmail.TestNoSubjectEmail"/>
+    </classes>    
+  </test>
+  
+  <test name="Test3" parallel="none">
+  
+    <classes>
+      <class name="ExerciseEmail.BaseLogInOut"/>
+      <class name="ExerciseEmail.TestNoMailBody"/>
+    </classes>
+  </test>
+ 
+      
+  <test name="Test4" parallel="true">  
+    <classes>
+      <class name="ExerciseEmail.BaseLogInOut"/>
+      <class name="ExerciseEmail.TestNoMailReceiver"/>
+    </classes>
+  </test>
+  
+  <test name="Test5" parallel="true">   
+    <classes>
+      <class name="ExerciseEmail.BaseLogInOut"/>
+      <class name="ExerciseEmail.TestInvalidRecipient"/>
+    </classes>
+   </test><!-- Test -->
+</suite> <!-- Suite -->
