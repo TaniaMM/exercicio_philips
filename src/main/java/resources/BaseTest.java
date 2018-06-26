@@ -1,5 +1,6 @@
 package resources;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -26,7 +27,7 @@ public class BaseTest {
 
 		prop = new Properties();
 		
-		prop.load(BaseTest.class.getResourceAsStream("data.properties"));
+		prop.load(BaseTest.class.getResourceAsStream(".." + File.separator + "data.properties"));
 
 		String browserName = prop.getProperty("browser");
 
